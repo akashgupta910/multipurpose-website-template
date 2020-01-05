@@ -1,0 +1,1138 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --primaryColor: #ff780a;
+    --font1: 'Lobster', cursive;
+    --font2: 'Open Sans', sans-serif;
+}
+
+
+/* ------------- Start Navbar --------------- */
+
+#navbar
+{
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    padding: 0 12em;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    height: 12vh;
+}
+
+#navbar .logo
+{
+    margin: auto 0;
+}
+
+#navbar .toggle-btn
+{
+    color: #fff;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#navbar .links
+{
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#navbar .link
+{
+    padding: 0 0.9em;
+    position: relative;
+}
+
+#navbar .close-links-btn
+{
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+    margin: 1em;
+    font-size: 26px;
+}
+
+#navbar .links .link a
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: var(--font2);
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+#navbar .links .link a:hover
+{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media(max-width: 1140px)
+{
+    #navbar
+    {
+        padding: 0 7em;
+    }
+
+}
+
+
+@media(max-width: 1000px)
+{
+    #navbar
+    {
+        padding: 0 5em;
+    }
+}
+
+@media(max-width: 990px)
+{
+    #navbar
+    {
+        padding: 0 5em;
+        background: rgba(0, 0, 0, 0.4);
+        border-bottom: none;
+        height: 11vh;
+    }
+
+    #navbar .links
+    {
+        display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: #333;
+        width: 50%;
+        height: 100vh;
+        text-align: center;
+    }
+
+    #navbar .close-links-btn
+    {
+        display: block;
+        border-bottom: none !important;
+    }
+
+    #navbar .links .link
+    {
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #navbar .toggle-btn
+    {
+        display: block;
+    }
+}
+
+@media(max-width: 600px)
+{
+    #navbar
+    {
+        padding: 0 2em;
+    }
+}
+
+/* -------------- End Navbar ---------------- */
+
+
+
+
+
+/* ---------------- Start Slideshow -------------- */
+
+#slideshow .carousel-item
+{
+    height: 100vh;
+    position: relative;
+}
+
+#slideshow .carousel-indicators li
+{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+}
+
+#slideshow .carousel-caption
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: sans-serif;
+    text-align: left;
+}
+
+#slideshow .carousel-caption h5
+{
+    font-family: var(--font2);
+    font-size: 56px;
+    font-weight: bolder;
+    word-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: #333 1px 0 10px;
+}
+
+#slideshow .carousel-caption p
+{
+    font-size: 17px;
+    text-transform: capitalize;
+    font-family: var(--font2);
+    text-shadow: #333 1px 0 10px;
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 30px;
+}
+
+#slideshow .carousel-caption h5 .text-colored
+{
+    color: var(--primaryColor);
+}
+
+
+#slideshow .carousel-caption .bttn
+{
+    background: transparent;
+    color: #fff;
+    padding: 11px 26px;
+    border-radius: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-family: var(--font2);
+    border: 2px solid #fff;
+}
+
+#slideshow .fa-chevron-left, #slideshow .fa-chevron-right
+{
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------------- End Slideshow ----------------- */
+
+
+
+/* --------------- Start Hero Details --------------- */
+
+#hero-details
+{
+    padding: 50px 0;
+}
+
+#hero-details .hero
+{
+    position: relative;
+    display: flex;
+}
+
+#hero-details .hero::after
+{
+    content: '';
+    width: 1px;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    margin-left: 20px;
+    display: block;
+}
+
+#hero-details .hero-last::after
+{
+    display: none;
+}
+
+#hero-details .hero .icon
+{
+    font-size: 40px;
+    padding: 0 16px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#hero-details .hero h5
+{
+    font-size: 17px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#hero-details .hero p
+{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+@media(max-width: 990px)
+{
+    #hero-details .hero
+    {
+        display: block;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    #hero-details .hero::after
+    {
+        display: none;
+    }
+}
+
+@media(max-width: 764px)
+{
+    #hero-details .hero
+    {
+        padding: 0 100px;
+    }
+}
+
+/* ---------------- End Hero Details ----------------- */
+
+
+
+/* ----------------- Start Our services ---------------- */
+
+#our-services
+{
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Images/servicebg.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 50px;
+    background-attachment: fixed;
+}
+
+#our-services .head
+{
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+#our-services .head h3
+{
+    padding: 5px 0;
+    font-size: 37px;
+}
+
+#our-services .head p
+{
+    font-size: 16.6px;
+    letter-spacing: 0.5px;
+}
+
+#our-services .service .card
+{
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid var(--primaryColor);
+    text-align: center;
+    box-shadow: 1px 2px 12px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+#our-services .service .card::after
+{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--primaryColor);
+    position: absolute;
+    bottom: 0;
+    transition: 0.6s;
+    z-index: -1;
+}
+
+#our-services .service .card:hover::after
+{
+    height: 100%;
+}
+
+#our-services .service .card:hover .card-title, 
+#our-services .service .card:hover .card-text,
+#our-services .service .card:hover .icon
+{
+    color: #fff;
+}
+
+
+#our-services .service .icon
+{
+    font-size: 40px;
+    color: var(--primaryColor);
+    padding-top: 7px;
+    padding-bottom: 16px;
+}
+
+#our-services .service .card-title
+{
+    color: rgba(0, 0, 0, 0.7);
+    font-family: var(--font2);
+    font-weight: 600;
+}
+
+#our-services .service .card-text
+{
+    font-family: var(--font2);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#our-services .service a
+{
+    background: #fff;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: 2px;
+    transition: 0.3s;
+    box-shadow: none !important;
+}
+
+@media(max-width: 764px)
+{
+    #our-services .service .card
+    {
+        margin: 15px 0;
+    }
+}
+
+/* ------------------ End Our Services ---------------- */
+
+
+
+/* ---------------------- Start Price ------------------ */
+
+#price
+{
+    padding: 40px 0;
+}
+
+#price .head
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#price .head h3
+{
+    font-size: 43px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#price .head p
+{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#price .table
+{
+    padding: 50px 0;
+}
+
+#price .card
+{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 0;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.04);
+}
+
+#price .card .card-body
+{
+    padding: 30px 0;
+}
+
+#price .card .cat
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primaryColor);
+}
+
+#price .card .price
+{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#price .card .price .time
+{
+    font-size: 18px;
+}
+
+#price .card .list-group-item
+{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+    color: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+#price .card a
+{
+    border: 1px solid var(--primaryColor);
+    padding: 13px 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: var(--primaryColor);
+}
+
+#price .standard
+{
+    transform: scale(1.18);
+}
+
+#price .standard a
+{
+    background: var(--primaryColor);
+    color: #fff;
+}
+
+@media(max-width: 764px)
+{
+    #price .card
+    {
+        margin: 10px 0;
+    }
+
+    #price .standard
+    {
+        transform: scale(1);
+    }
+
+    #price .table
+    {
+        padding: 0;
+    }
+}
+
+/* ----------------------- End Price --------------------- */
+
+
+
+/* ---------------- Start Why choose us --------------- */
+
+#why-choose
+{
+    padding-bottom: 50px;
+}
+
+#why-choose .head
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+#why-choose .head h3
+{
+    font-size: 43px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#why-choose .head p
+{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#why-choose .contents .card
+{
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#why-choose .contents .card .card-text
+{
+    font-size: 17.5px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-top: 6px;
+    padding-bottom: 15px;
+    font-family: sans-serif;
+}
+
+#why-choose .contents .card ul
+{
+    list-style: none;
+}
+
+#why-choose .contents .card ul li
+{
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+#why-choose .contents .card ul li .fa
+{
+    margin-right: 6px;
+    font-size: 22px;
+    color: var(--primaryColor);
+}
+
+/* ---------------- End Why choose us ----------------- */
+
+
+
+/* ---------------- Start Projects ---------------- */
+
+#projects
+{
+    padding-bottom: 55px;
+}
+
+#projects .head
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+#projects .head h3
+{
+    font-size: 43px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#projects .head p
+{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#projects .card
+{
+    border: none;
+    text-align: center;
+}
+
+#projects .card img
+{
+    box-shadow: 1px 2px 12px -1px rgba(0, 0, 0, 0.3);
+}
+
+#projects .card .card-title
+{
+    font-size: 22px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 5px 0;
+}
+
+#projects .card .card-text
+{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 27px;
+}
+
+#projects .card a
+{
+    background: var(--primaryColor);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    box-shadow: 1px 2px 12px -1px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+#projects .card a:hover
+{
+    box-shadow: 1px 2px 12px -1px rgba(0, 0, 0, 0.44);
+}
+
+@media(max-width: 990px)
+{
+    #projects .card
+    {
+        margin: 13px 0;
+    }
+}
+
+/* ---------------- End Projects ----------------- */
+
+
+
+/* ---------------- Start Hero2 ----------------- */
+
+#hero2
+{
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Images/servicebg.jpg') center center no-repeat;
+    min-height: 420px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 40px 0;
+    position: relative;
+}
+
+#hero2 .content
+{
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hero2 .content .head
+{
+    padding-bottom: 34px;
+}
+
+#hero2 .content a 
+{
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 8px 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+#hero2 .content a:hover, #hero2 .content .active
+{
+    background: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+
+@media(max-width: 990px)
+{
+    #hero2
+    {
+        display: none;
+    }
+}
+
+/* ----------------- End Hero2 ----------------- */
+
+
+
+/* ---------------- Start Blog Posts ------------- */
+
+#blog-posts
+{
+    padding-bottom: 75px;
+}
+
+#blog-posts .head
+{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+#blog-posts .head h3
+{
+    font-size: 43px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#blog-posts .head p
+{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#blog-posts .card
+{
+    border: none;
+    margin: 20px 0;
+}
+
+#blog-posts .card img
+{
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+#blog-posts .card .cat
+{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 89%;
+    left: 0;
+}
+
+#blog-posts .card .cat li
+{
+    margin-right: 5px;
+}
+
+#blog-posts .card .cat li a
+{
+    background: var(--primaryColor);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 10px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.2);
+}
+
+#blog-posts .card .card-body
+{
+    padding: 16px 0;
+}
+
+#blog-posts .card .card-body .date
+{
+    font-size: 18px;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#blog-posts .card .card-body .card-title
+{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#blog-posts .card .card-body .card-text
+{
+    padding-bottom: 26px;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.3px;
+}
+
+#blog-posts .card .card-body a
+{
+    background: var(--primaryColor);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    box-shadow: 1px 2px 12px -1px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* ---------------- End Blog Posts ------------------- */
+
+
+
+/* ---------------- Start Testimonials -------------- */
+
+#testimonials
+{
+    padding-bottom: 55px;
+}
+
+#testimonials .head
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+#testimonials .head h3
+{
+    font-size: 43px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#testimonials .head p
+{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#testimonials .card
+{
+    border: none;
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+#testimonials .card img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+
+#testimonials .card .card-title
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#testimonials .card .card-text
+{
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 27px;
+}
+
+#testimonials .card .rating
+{
+    color: var(--primaryColor);
+    font-size: 15px;
+}
+
+@media(max-width: 990px)
+{
+    #testimonials .card
+    {
+        margin: 10px 0;
+    }
+}
+
+/* ---------------- End Testimonials -------------- */
+
+
+
+/* ----------------- Start Our Clients ------------- */
+
+#our-clients
+{
+    background: rgba(0, 0, 0, 0.02);
+    padding: 40px 0;
+    margin-top: 30px;
+}
+
+#our-clients a
+{
+    margin: 20px 25px;
+}
+
+#our-clients .fa
+{
+    font-size: 60px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.2);
+    transition: 1s;
+}
+
+#our-clients .fa:hover
+{
+    color: rgba(0, 0, 0, 0.7);
+    transform: rotate(360deg);
+}
+
+/* ----------------- End Our Clients ----------------- */
+
+
+
+/* ---------------- Start Footer ----------------- */
+
+#footer
+{
+    padding: 60px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+#footer .logo
+{
+    color: rgba(255, 255, 255, 0.45);
+}
+
+#footer .info
+{
+    margin-top: 18px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    padding-right: 6px;
+}
+
+#footer .navi-gation .nav-title
+{
+    margin-bottom: 12px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+#footer .navi-gation ul
+{
+    list-style: none;
+}
+
+#footer .navi-gation ul li
+{
+    margin: 6px 0;
+}
+
+#footer .navi-gation ul li .fa
+{
+    margin-right: 6px;
+}
+
+#footer .navi-gation ul li a
+{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#footer .navi-gation ul li a:hover
+{
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+#footer .subscribe h3
+{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+#footer .subscribe input
+{
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#footer .subscribe button
+{
+    background: transparent;
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    padding: 6px 20px;
+    border-radius: 20px;
+    margin-top: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#footer .subscribe button:hover
+{
+    background: var(--primaryColor);
+    color: #fff;
+}
+
+footer
+{
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+}
+
+footer .text
+{
+    font-size: 16.5px;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer .social-icons a
+{
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 6px;
+    font-size: 19px;
+    transition: 0.2s;
+}
+
+footer .social-icons a:hover
+{
+    color: #fff;
+}
+
+@media(max-width: 990px)
+{
+    #footer .logo
+    {
+        margin-left: 7px;
+    }
+
+    #footer .info
+    {
+        margin-bottom: 20px;
+        margin-left: 7px;
+        letter-spacing: 1px;
+    }
+
+    #footer .navi-gation
+    {
+        margin: 20px 0;
+        margin-left: 7px;
+    }
+
+    #footer .subscribe
+    {
+        margin-top: 20px;
+    }
+
+    #footer .subscribe input
+    {
+        width: 60%;
+    }
+}
+
+/* ----------------- End Footer ---------------- */

@@ -1,0 +1,359 @@
+<!-- --------- Start Info Navbar --------- -->
+<section id="info-navbar">
+    <div class="container">
+
+        <div class="d-flex" style="flex-wrap: wrap;">
+
+            <!-- Start informations -->
+            <div class="infos d-flex">
+                <div class="info d-flex">
+                    <div><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div>
+                        <h5>Address</h5>
+                        <p>California, TM 6564</p>
+                    </div>
+                </div>
+                <div class="info d-flex">
+                    <div><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div>
+                        <h5>Email</h5>
+                        <p>youremail@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info d-flex">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div>
+                        <h5>Phone</h5>
+                        <p>+123 657 8789</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End informations -->
+
+            <!-- Start social media icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </div>
+            <!-- End social media icons -->
+
+        </div>
+
+    </div>
+</section>
+<!-- --------- End Info Navbar --------- -->
+
+
+<!-- --------- Start Navbar --------- -->
+<section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars mr-1" aria-hidden="true"></i>
+            </button>
+
+            <a class="navbar-brand" href="#">
+                <img src="Images//Logo/logo2.png">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ml-3">
+                    <li class="nav-item">
+                        <a class="nav-link link-active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dropdown <i class="fa fa-angle-right ml-1"
+                                style="font-size: 13px;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link last-link" id="search-btn" href="#"><i class="fa fa-search"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</section>
+<!-- --------- End Navbar --------- -->
+
+
+<style>
+    #nav-bar {
+        padding: 15px 0;
+        box-shadow: 0 5px 12px -1px rgba(0, 0, 0, 0.06);
+        background: transparent;
+    }
+
+    #nav-bar .navbar-brand img {
+        width: 100%;
+    }
+
+    #nav-bar .nav-item {
+        margin: 0 8px;
+        position: relative;
+    }
+
+    #nav-bar .nav-link {
+        font-size: 13px;
+        letter-spacing: 1px;
+        position: relative;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1.5px solid #fff;
+        font-family: var(--font2);
+        letter-spacing: 1px;
+        color: rgba(0, 0, 0, 0.7);
+        transition: 0.3s;
+    }
+
+    #nav-bar .nav-link .fa {
+        font-size: 17px;
+    }
+
+    #nav-bar .nav-link:hover {
+        color: var(--primaryColor);
+    }
+
+    #nav-bar .nav-link::after {
+        content: '';
+        content: '';
+        width: 1px;
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.08);
+        margin-left: 10px;
+    }
+
+    #nav-bar .last-link::after {
+        display: none;
+    }
+
+    #nav-bar .navbar-toggler {
+        border: none;
+        outline: none;
+        font-size: 25px;
+    }
+
+    #nav-bar #search-btn {
+        font-size: 16px;
+    }
+
+    @media(max-width: 990px) {
+        #nav-bar {
+            padding: 6px 0;
+        }
+
+        #nav-bar .navbar-brand {
+            margin: auto;
+            padding-right: 30px;
+        }
+
+        #nav-bar .nav-link::after {
+            display: none;
+        }
+
+        #nav-bar .nav-item {
+            text-align: center;
+        }
+
+        #nav-bar .nav-item:first-child {
+            margin-top: 20px;
+        }
+
+        #nav-bar .nav-link {
+            margin: 3px 0;
+        }
+
+        #nav-bar .nav-link:hover,
+        #nav-bar .link-active {
+            background: var(--primaryColor);
+            color: #fff;
+        }
+
+        #nav-bar #search-btn {
+            display: none;
+        }
+
+    }
+
+
+
+    /* ------------- Start Searchbar ------------ */
+
+#searchbar 
+{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+    position: fixed;
+    top: 12vh;
+    z-index: 100;
+    width: 100%;
+}
+
+#searchbar input
+{
+    width: 90%;
+    font-size: 23px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    height: 9vh;
+    font-family: var(--font2);
+    font-size: 20px;
+}
+
+#searchbar button
+{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 5%;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-left: -3.6rem;
+    margin-top: 2px;
+    outline: none;
+}
+
+@media(max-width: 990px)
+{
+    #searchbar
+    {
+        display: block;
+        position: relative;
+    }
+
+    #searchbar input
+    {
+        width: 19rem;
+        height: 2.8rem;
+        font-size: 17px;
+        margin-top: 10px;
+    }
+
+    #searchbar button
+    {
+        width: 2.64rem;
+        height: 2.64rem;
+        margin: 0;
+        background: transparent;
+        margin-left: -3rem;
+        color: rgba(0, 0, 0, 0.5)
+    }
+}
+
+/* --------------- End Searchbar -------------- */
+
+
+/* ---------- Start Info Navbar ------------ */
+
+#info-navbar
+{
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-family: sans-serif;
+    position: relative;
+}
+
+#info-navbar .info
+{
+     margin: 0 10px;
+     flex-wrap: wrap;
+}
+
+#info-navbar .info::after
+{
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+#info-navbar .info .fa
+{
+    margin: 0 17px;
+    font-size: 40px;
+    color: var(--primaryColor);
+}
+
+#info-navbar .info h5
+{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+#info-navbar .info p
+{
+    font-size: 14px;
+    margin-top: -8px;
+}
+
+#info-navbar .social-icons
+{
+    margin-left: auto;
+}
+
+#info-navbar .social-icons a
+{
+    font-size: 24px;
+    margin: 0 4px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#info-navbar .social-icons a:hover .fa
+{
+    transform: translateY(-10px);
+    color: #333;
+}
+
+#info-navbar .social-icons a .fa
+{
+    margin-top: 13px;
+    transition: 0.3s;
+}
+
+@media(max-width: 990px)
+{
+    #info-navbar
+    {
+        display: none;
+    }
+}
+
+/* ----------- End Info Navbar ------------ */
+
+
+
+
+</style>

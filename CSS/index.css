@@ -1,0 +1,841 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --primaryColor: #ff780a;
+    --font1: 'Lobster', cursive;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+
+/* --------------- Start Preloader ----------------- */
+
+#preloader
+{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: block;
+}
+
+#preloader img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --------------- End Preloader -------------------- */
+
+
+/* --------------- Start Header ------------- */
+
+#header
+{
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/Index_page/headerbg.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+#header .content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+#header .logo
+{
+    width: 200px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#header .content h1
+{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+#header .content p
+{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+#header .content button
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+#header .content a
+{
+    background: var(--primaryColor);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.1);
+}
+
+#header .content button:hover
+{
+    transform: translateY(-10px);
+}
+
+@media(max-width: 990px)
+{
+    #header .logo
+    {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #header .content h1
+    {
+        font-size: 45px;
+    }
+}
+
+@media(max-width: 450px)
+{
+    #header .content h1
+    {
+        font-size: 35px;
+    }
+
+    #header .content p
+    {
+        font-size: 17px;
+        padding-top: 15px;
+    }
+}
+
+/* --------------- End Header -------------- */
+
+
+
+/* --------------- Start Demo Collection ---------------- */
+
+#demo-collection
+{
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+#demo-collection .head
+{
+    padding: 15px 0;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 80px;
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+#demo-collection .head::before
+{
+    content: '';
+    width: 170px;
+    height: 80px;
+    background: var(--primaryColor);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+#demo-collection .head::after
+{
+    content: '';
+    width: 170px;
+    height: 80px;
+    background: var(--primaryColor);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+#demo-collection .head .title
+{
+    padding: 5px 0;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#demo-collection .content .nav
+{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#demo-collection .content .nav .nav-link
+{
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+    font-size: 13.5px;
+    transition: 0.3s;
+}
+
+#demo-collection .content .nav .nav-link:hover
+{
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+}
+
+#demo-collection .content .nav .active
+{
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+}
+
+#demo-collection .content .card
+{
+    border: none;
+}
+
+#demo-collection .content .card .view-link a
+{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    padding: 6px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    z-index: 10;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+#demo-collection .content .card .view-link a:hover
+{
+    background: var(--primaryColor);
+    color: #fff;
+}
+
+#demo-collection .content .card .view-link a:hover .fa
+{
+    transform: translateX(6px);
+    transition: 0.1s;
+}
+
+#demo-collection .content .card img
+{
+    box-shadow: 0 5px 12px -1px rgba(143, 124, 124, 0.5);
+    transition: 0.5s;
+}
+
+
+#demo-collection .content .card .head-card::after
+{
+    content: '';
+    width: 0;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.6;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+#demo-collection .content .card:hover .head-card::after
+{
+    visibility: visible;
+    width: 100%;
+}
+
+#demo-collection .content .card:hover .view-link a
+{
+    visibility: visible;
+    left: 50%;
+}
+
+#demo-collection .content .card .card-title a
+{
+    font-size: 14px;
+    word-spacing: 3px;
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+}
+
+
+/* ---------------- End Demo Collection ---------------- */
+
+
+/* ---------------- Start Layouts Demos ------------------- */
+
+#layouts-demos
+{
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+#layouts-demos .head
+{
+    padding: 15px 0;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 80px;
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+#layouts-demos .head::before
+{
+    content: '';
+    width: 170px;
+    height: 80px;
+    background: var(--primaryColor);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+#layouts-demos .head::after
+{
+    content: '';
+    width: 170px;
+    height: 80px;
+    background: var(--primaryColor);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+#layouts-demos .head .title
+{
+    padding: 5px 0;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#layouts-demos .head-caption
+{
+    text-align: center;
+    width: 70%;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 16.5px;
+}
+
+#layouts-demos .box
+{
+    margin: 20px 0;
+}
+
+#layouts-demos .box .title
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 6em;
+    font-weight: bold;
+    color: var(--primaryColor);
+}
+
+#layouts-demos .box .subtitle
+{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#layouts-demos .box .text
+{
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 16.5px;
+    margin-top: 10px;
+    letter-spacing: 0.2px;
+    line-height: 26px;
+}
+
+@media(max-width: 500px)
+{
+    #layouts-demos .box
+    {
+        text-align: center;
+    }
+}
+
+/* ------------------ End Layouts Demos -------------------- */
+
+
+/* --------------- Start Hero 1st ----------------- */
+
+#hero1
+{
+    padding: 3.5em 0;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Images/Index_page/hero1.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+#hero1 .content
+{
+    text-align: center;
+}
+
+#hero1 .content .title
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#hero1 .content .title .text-colored
+{
+    color: var(--primaryColor);
+}
+
+#hero1 .content .text
+{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 5px;
+}
+
+@media(max-width: 400px)
+{
+    #hero1 .content .title
+    {
+        font-size: 35px;
+    }
+}
+
+/* ----------------- End Hero 1st ----------------- */
+
+
+
+/* ------------------ Start Features --------------- */
+
+#features
+{
+    padding-top: 6.5em;
+    padding-bottom: 5.5em;
+}
+
+#features .head
+{
+    padding: 15px 0;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 80px;
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+#features .head::before
+{
+    content: '';
+    width: 170px;
+    height: 80px;
+    background: var(--primaryColor);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+#features .head::after
+{
+    content: '';
+    width: 170px;
+    height: 80px;
+    background: var(--primaryColor);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+#features .head .title
+{
+    padding: 5px 0;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#features .head-caption
+{
+    text-align: center;
+    width: 70%;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 16.5px;
+}
+
+#features .box
+{
+    display: flex;
+    margin: 30px 0;
+}
+
+#features .box .icon .fa
+{
+    font-size: 30px;
+    margin-right: 15px;
+    background: var(--primaryColor);
+    color: #fff;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#features .box .content .title
+{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#features .box .content .text
+{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    margin-top: 10px;
+    letter-spacing: 0.2px;
+    line-height: 22px;
+}
+
+/* ------------------ End Features --------------- */
+
+
+
+/* ----------------- Start Shortcodes & Components ---------------- */
+
+#shortcodes
+{
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+#shortcodes .head
+{
+    padding: 15px 0;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 80px;
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+#shortcodes .head::before
+{
+    content: '';
+    width: 170px;
+    height: 80px;
+    background: var(--primaryColor);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+#shortcodes .head::after
+{
+    content: '';
+    width: 170px;
+    height: 80px;
+    background: var(--primaryColor);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    transform: skew(2deg, 2deg);
+}
+
+#shortcodes .head .title
+{
+    padding: 5px 0;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#shortcodes .boxes
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#shortcodes .boxes a
+{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-family: var(--font1);
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 2em;
+    width: 14em;
+    transition: 0.2s;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#shortcodes .boxes a::after
+{
+    content: '';
+    width: 0;
+    height: 100%;
+    background: var(--primaryColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+#shortcodes .boxes a:hover
+{
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    color:#fff;
+    z-index: 10;
+}
+
+#shortcodes .boxes a:hover::after
+{
+    width: 100%;
+}
+
+#shortcodes .boxes a .fa
+{
+    font-size: 25px;
+}
+
+/* ----------------- End Shortcodes & Components ------------------- */
+
+
+
+/* ------------------ Start Hero2 ----------------- */
+
+#hero2
+{
+    background:linear-gradient(rgba(119, 86, 86, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/Index_page/hero2.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 9em;
+    position: relative;
+    color: #fff;
+}
+
+#hero2 .content
+{
+    text-align: center;
+}
+
+#hero2 .content .title
+{
+    font-size: 55px;
+    font-family: var(--font1);
+    font-weight: bold;
+    letter-spacing: 4px;
+    word-spacing: 6px;
+    text-transform: capitalize;
+    padding-bottom: 36px;
+}
+
+#hero2 .content .link a
+{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 0 12px -1px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    z-index: 1;
+    position: relative;
+}
+
+#hero2 .content .link a::after
+{
+    content: '';
+    width: 0;
+    height: 100%;
+    background: var(--primaryColor);
+    position: absolute;
+    top: 0;
+    left: 49.9%;
+    transform: translateX(-50%);
+    transition: 0.26s;
+    z-index: -1;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+#hero2 .content .link a:hover::after
+{
+    width: 100%;
+    visibility: visible;
+}
+
+#hero2 .content .link a:hover
+{
+    border-color: var(--primaryColor);
+}
+
+@media(max-width: 990px)
+{
+    #hero2
+    {
+        padding: 9em 4em;
+    }
+}
+
+@media(max-width: 650px)
+{
+    #hero2
+    {
+        padding: 9em 3em;
+    }
+
+    #hero2 .content .title
+    {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 350px)
+{
+    #hero2
+    {
+        padding: 9em 1em;
+    }
+
+    #hero2 .content .title
+    {
+        font-size: 30px;
+    }
+
+    #hero2 .content .link a
+    {
+        font-size: 12px;
+    }
+   
+}
+
+/* ------------------ End Hero2 -------------------- */
+
+
+
+/* ----------------- Start Scroll to top link ------------------ */
+
+#scroll-top
+{
+    display: none;
+}
+
+#scroll-top a
+{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 21px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+#scroll-top a:hover
+{
+    background: var(--primaryColor);
+}
+
+/* ------------------ End Scroll to top link ----------------- */
